@@ -94,9 +94,8 @@ form{
     color: rgb(62, 81, 209);
 }
 .label{
-    margin-bottom: 18px;
-    white-space: nowrap;
     color: rgb(39, 39, 131);
+    width: 200px;
 }
 input{
     background-color: transparent;
@@ -149,11 +148,9 @@ container{
     background-image: url('../medicos.png');
     background-size: cover; 
     background-position: center;
+    
 }
 table{
-    margin: auto;
-    margin-left: 25px;
-    margin-right: 5px;
     color: rgb(39, 39, 131);
     border-style: groove;
     border-color: rgb(39, 39, 131);
@@ -171,12 +168,16 @@ table{
 }
 .form-group{
     display: flex;
+    align-items:flex-start;
     flex-direction: column;
     margin-left: 170px;
+    margin-bottom: 20px;
     z-index: 1;
 }
 .subrayado{
     border-bottom: 1px solid rgb(39, 39, 131);
+    flex: 1;
+    margin-left: 10px;
 }
 .formulario-contenedor {
   display: flex;
@@ -191,6 +192,24 @@ table{
   top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+#id{
+    margin-top: 10px;
+}
+#name{
+    margin-top: 10px;
+}
+#obrasocial{
+    margin-top: 10px;
+}
+#email{
+    margin-top: 10px;
+}
+#date{
+    margin-top: 10px;
+}
+#medical{
+    margin-top: 140px;
 }
     </style>
 <header>
@@ -213,13 +232,13 @@ table{
             <container class="data"> 
             <div class="formulario-contenedor">
                 <div class="form-group">
-                    <label class="label" for="name_surname">NAME AND SURNAME:</label>
-                    <input class="subrayado" type="text" id="name_surname" required>
+                    <label class="label">NAME AND SURNAME:</label>
+                    <input class="subrayado" type="text" id="name" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="label" >MEDICAL ASSURANCE:</label>
-                    <input class="subrayado" type="number" id="obra_social" required>
+                    <label class="label" id="medical">MEDICAL ASSURANCE:</label>
+                    <input class="subrayado" type="number" id="obrasocial" required>
                 </div>
                 <div class="form-group">
                     <label class="label" >ID:</label>
@@ -236,7 +255,6 @@ table{
             </div>    
             </container>
         </form>  
-    
 </section>
 </body>
 </html>
